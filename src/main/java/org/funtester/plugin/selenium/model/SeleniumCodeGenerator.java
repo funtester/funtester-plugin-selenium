@@ -78,7 +78,7 @@ public class SeleniumCodeGenerator {
 					}
 				}else{
 					AbstractTestOracleStep oracleStep = ( AbstractTestOracleStep ) abstractTestStep;
-					testMethod.addCommand( oracleStep.getActionName() );
+					testMethod.addCommand( Translator.translateOracleStep ( oracleStep ) );
 				}
 			}
 			
@@ -122,22 +122,6 @@ public class SeleniumCodeGenerator {
 				fileWriter.close();
 			}
 		}
-		
-		/*
-		Map< String, Object > input = new HashMap< String, Object >();
-		input.put( "test", testCase );
-		
-		Template template;
-		try {
-			template = cfg.getTemplate( "selenium.ftl" );
-			Writer consoleWriter = new OutputStreamWriter( System.out );
-			template.process( input, consoleWriter );
-		}catch( IOException ex ){
-			ex.printStackTrace();
-		} catch (TemplateException e) {
-			e.printStackTrace();
-		}
-	 */
 	}
 	
 	private static TestAnnotation createForSelenium() {
@@ -258,7 +242,6 @@ public class SeleniumCodeGenerator {
 		
 		t.addImport( "org.openqa.selenium.By" );
 		t.addImport( "org.openqa.selenium.WebDriver" );
-		
 		t.addImport( "org.openqa.selenium.firefox.FirefoxDriver" );
 		t.addImport( "org.openqa.selenium.support.ui.Select" );
 		t.addImport( "org.testng.annotations.Test" );

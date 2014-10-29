@@ -189,7 +189,7 @@ public class TestGerado {
 		sendKeysSelenium( driver.findElement( By.id( "name" ) ),"W-F ._F_.84g 6-_t_6. . " );
 		selectByVisibleTextSelenium( ( new Select ( driver.findElement( By.id( "vocabulary" ) ) ) ),"BNd{:H{Jc:|K6||6SW/3" );
 		clickSelenium( driver.findElement( By.id( "okButton" ) ) );
-		check
+		//check
 		//Action [ close ] can't be translated
 	}
 	
@@ -214,7 +214,7 @@ public class TestGerado {
 		sendKeysSelenium( driver.findElement( By.id( "name" ) ),"D_6_ Xo  5 T 0_26Og _" );
 		selectByVisibleTextSelenium( ( new Select ( driver.findElement( By.id( "vocabulary" ) ) ) ),"N7sp*-GB#N<7)N.V|1uZ5hXP]u`" );
 		clickSelenium( driver.findElement( By.id( "okButton" ) ) );
-		check
+		//check
 		//Action [ close ] can't be translated
 	}
 	
@@ -239,7 +239,7 @@ public class TestGerado {
 		sendKeysSelenium( driver.findElement( By.id( "name" ) ),"-43  --." );
 		selectByVisibleTextSelenium( ( new Select ( driver.findElement( By.id( "vocabulary" ) ) ) ),"{xe[(}rM9qn{SF$8T@=_@9qM_HuzkCt" );
 		clickSelenium( driver.findElement( By.id( "okButton" ) ) );
-		check
+		//check
 		//Action [ close ] can't be translated
 	}
 	
@@ -264,7 +264,7 @@ public class TestGerado {
 		sendKeysSelenium( driver.findElement( By.id( "name" ) ),"c.8  S L" );
 		selectByVisibleTextSelenium( ( new Select ( driver.findElement( By.id( "vocabulary" ) ) ) ),"qnb>=t9uYiE" );
 		clickSelenium( driver.findElement( By.id( "okButton" ) ) );
-		check
+		//check
 		//Action [ close ] can't be translated
 	}
 	
@@ -276,7 +276,7 @@ public class TestGerado {
 		//Action [ show ] can't be translated
 		selectByVisibleTextSelenium( ( new Select ( driver.findElement( By.id( "vocabulary" ) ) ) ),"Desktop Applications Vocabulary (English)" );
 		clickSelenium( driver.findElement( By.id( "okButton" ) ) );
-		check
+		//check
 		//Action [ close ] can't be translated
 	}
 	
@@ -288,7 +288,7 @@ public class TestGerado {
 		//Action [ show ] can't be translated
 		sendKeysSelenium( driver.findElement( By.id( "name" ) ),".8__14." );
 		clickSelenium( driver.findElement( By.id( "okButton" ) ) );
-		check
+		//check
 		//Action [ close ] can't be translated
 	}
 	
@@ -301,7 +301,7 @@ public class TestGerado {
 		sendKeysSelenium( driver.findElement( By.id( "name" ) ),"J$Am}lRN4j.Ny#tqS;wml:-&Va_Z0f!&#@>);j,.&j~Az,8J+mfzUEWn~FPqW[wc1uVJb&N3W|=F?`&UM)e<?-?9" );
 		selectByVisibleTextSelenium( ( new Select ( driver.findElement( By.id( "vocabulary" ) ) ) ),"Desktop Applications Vocabulary (English)" );
 		clickSelenium( driver.findElement( By.id( "okButton" ) ) );
-		check
+		//check
 		//Action [ close ] can't be translated
 	}
 	

@@ -18,10 +18,13 @@ public class Translator {
 	 *************/
 	
 	public static String translateActionStep( AbstractTestActionStep step, AbstractTestElement element ) {
-		System.out.println( step.getStepId() );
-		setupTranslatedActions();
+		setupTranslatedActions(); //Fill the list
 		String translatedElement = getElement( step, element );
 		return translateAction( step, element, translatedElement );
+	}
+	
+	public static String translateOracleStep( AbstractTestOracleStep step ){
+		return "";
 	}
 	
 	/************
@@ -53,34 +56,45 @@ public class Translator {
 	private static String translateAction( AbstractTestActionStep step, AbstractTestElement element,  String translatedElements ) {
 		
 		if( step.getActionName().equals( "click" ) )
-			return translatedActions.get( "click" ) + insideParenthesis( translatedElements ) + ";" + testId( step );
+			return translatedActions.get( "click" ) + insideParenthesis( translatedElements ) + ";" + testId( step )
+				   ;
 		
 		if( step.getActionName().equals( "type" ) )
 			return translatedActions.get( "type" ) + 
 				   insideParenthesis( translatedElements + "," + 
-			       insideQuotes ( translateValue( element.getValue() ) ) ) + ";" + testId( step );
+			       insideQuotes ( translateValue( element.getValue() ) ) ) + ";" + testId( step )
+			       ;
 		
 		if( step.getActionName().equals( "select" ) )
 			return translatedActions.get( "select" ) + 
 				   insideParenthesis( translatedElements + "," + 
-			       insideQuotes ( translateValue( element.getValue() ) ) ) + ";" + testId( step );
+			       insideQuotes ( translateValue( element.getValue() ) ) ) + ";" + testId( step )
+			       ;
 		
 		if( step.getActionName().equals( "select.first" ) )
 			return translatedActions.get( "select.first" ) + 
-				   insideParenthesis( translatedElements ) + ";" + testId( step );
+				   insideParenthesis( translatedElements ) + ";" + testId( step )
+				   ;
 		
 		if( step.getActionName().equals( "double.click" ) )
 			return translatedActions.get( "doubleClick" ) + 
-				   insideParenthesis( translatedElements ) + ";" + testId( step );
+				   insideParenthesis( translatedElements ) + ";" + testId( step )
+				   ;
 		
 		if( step.getActionName().equals( "drag.drop" ) )
 			return translatedActions.get( "drag.drop" ) + 
-				   insideParenthesis( translatedElements + "," + translatedElements ) + ";" + testId( step );
+				   insideParenthesis( translatedElements + "," + translatedElements ) + ";" + testId( step )
+				   ;
 		
 		//Default values if there is no match 
 		return "//Action [ " + step.getActionName() + " ] can't be translated";
 	}
-
+	
+	public static String translateOracleActions( ){
+		//Default values if there is no match 
+		return "//Oracle [ " + "name" + " ] can't be translated";
+	}
+	
 	//OK
 	public static void setupTranslatedActions(){
 		
@@ -112,8 +126,7 @@ public class Translator {
 	/********
 	 * Misc *
 	 ********/
-	
-	//Uteis
+
 	private static String insideParenthesis( String value ){
 		return "( " + value + " )";
 	}
