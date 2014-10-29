@@ -7,14 +7,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import com.thoughtworks.selenium.DefaultSelenium;
+import com.thoughtworks.selenium.Selenium;
+
 
 public class SeleniumTest {
 	
 	public static void main ( String [] args ){
 		
 		WebDriver driver = new FirefoxDriver();
+		System.out.println( "foi..." );
+		driver.get("http://www.google.com.br");
+		isTextPresent( "brasil", driver ); //case sensitive
 		
-		driver.get("http://newtours.demoaut.com/");
+		/*
 		driver.findElement(By.linkText("REGISTER")).click();
 		driver.findElement(By.name("firstName")).sendKeys("User1");
 		driver.findElement(By.name("lastName")).sendKeys("Surname1");
@@ -27,7 +33,16 @@ public class SeleniumTest {
 		driver.findElement(By.name("password")).sendKeys("user1");
 		driver.findElement(By.name("confirmPassword")).sendKeys("user1");
 		driver.findElement(By.name("register")).click();
+		*/
 		driver.close();
 		driver.quit();
+	}
+	
+	public static boolean isTextPresent(String txtValue, WebDriver driver ){
+    
+        boolean b = driver.getPageSource().contains(txtValue);
+        System.out.println( b );
+        return b;
+   
 	}
 }
