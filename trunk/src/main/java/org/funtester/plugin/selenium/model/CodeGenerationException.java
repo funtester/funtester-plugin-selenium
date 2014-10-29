@@ -2,8 +2,8 @@ package org.funtester.plugin.selenium.model;
 
 public class CodeGenerationException extends Exception {
 	
-	//TODO: SerivaVersionUID
-	
+	private static final long serialVersionUID = 7552333235915301270L;
+
 	public CodeGenerationException() {
 		super();
 	}
